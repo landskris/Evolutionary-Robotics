@@ -1,0 +1,23 @@
+0 CoreComponent Core 0
+	0 ActiveHinge Hip1 1 
+		0 FixedBrick UpperLeg1 1
+			0 ActiveHinge Knee1 0 
+				0 FixedBrick LowerLeg1 0 
+	1 ActiveHinge Hip2 3 
+		0 FixedBrick UpperLeg2 1
+			0 ActiveHinge Knee2 0 
+				0 FixedBrick LowerLeg2 0 
+	2 ActiveHinge Hip3 1
+		0 ParametricJoint LongJoint 0 0.1 30 0
+			0 FixedBrick Knee3 0
+				0 PassiveHinge LowerLeg3 0
+					0 FixedBrick Foot3 0 
+	3 FixedBrick Hip4 0
+		0 ActiveHinge UpperLeg4 0 	
+			0 FixedBrick Knee4 0		
+				1 FixedBrick Knee5 0 
+				2 FixedBrick Knee6 0
+
+
+
+

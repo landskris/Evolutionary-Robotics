@@ -1,0 +1,41 @@
+Rep fra lab2 evolutionary: 
+
+ docker kill robogen1_sim 
+
+ docker kill robogen1_evo 
+
+1a) For the txt file, the body is composed of the 2 first tabbed in sections. 
+	-each tab represents in the following order , and each new tab is an extension
+		-> attachment pos(which face we connect to) , CompType, parameter name we define, 											orientation (0-3)  
+
+-The last lines in the bottom is the brain 
+
+Hip1 0 Oscillator 0.8 -0.8 1 = oscillator, period, phase-offset and amplitude. 
+For sigmoid neurons there is only bias.
+
+
+1.2) 
+- Activehinge is basically "grep hinge" while passiveHinge is more like on a door. 
+-remove 3 lines, will remove one side of the robot  
+0 FixedBrick Knee4 0
+3 FixedBrick LowerLeg4 0
+
+1.2.2) 
+Period change: Will se it's moving with less frequency in the behaviour, but also this depends on the period of other joints. 
+Phase-offset: Basically shows the coordination of the movements. If all are 0, then the robot will start twisting "arms" in a rhythm. If not, then the robot will depend on the phase lags more.
+e.g: Set one oscillator to 1 and one to -1 then they will swing in opposite directions. 
+Amplitude: Will give the size of he movement for each side, e.g amp 1 for left and 0 for right, then will move left. 
+
+ANN example: Will get stuck, if we set all weights to 10. Will just freeze. 
+-> For -10 some joints: Will move in opposite directions for neurons with opposite sign in the weights. Then, it will freeze again. ALL "WEIGHTS" HERE ARE BIASES BTW, SO THAT'S WHY ITS NOT MOVING
+
+"Hip2 0 Sigmoid 10
+Knee1 0 Sigmoid -10
+Knee2 0 Sigmoid 10"
+
+With Weights: 
+
+
+Core 0 Hip2 0 10
+Hip1 0 Knee1 0 10
+Hip2 0 Knee2 0 10
