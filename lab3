@@ -1,0 +1,5 @@
+lab3) 
+
+Basically looked into the different parameters for evolving a robot body and its brain. 
+The subtreeDuplicate makes it waay easier to get more limbs and the number of initial body parts as well makes a large bound to the size development of the robot. 
+
